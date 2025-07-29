@@ -288,7 +288,7 @@ def main():
                       # Lecture sécurisée des credentials depuis les secrets
                       creds_dict = st.secrets["gcp_service_account"]
 
-                      scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+                      scopes = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
                       credentials = Credentials.from_service_account_info(creds_dict, scopes=scopes)
 
                       # Connexion Google Sheets
@@ -363,7 +363,7 @@ def main():
             
                   creds_dict = st.secrets["gcp_service_account"]
 
-                  scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+                  scopes = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
                  
                   credentials = Credentials.from_service_account_info(creds_dict, scopes=scopes)
                   
